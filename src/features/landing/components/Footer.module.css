@@ -1,0 +1,7 @@
+.footer { border-top: 1px solid var(--color-line); padding-block: var(--space-8) var(--space-6); }
+.grid { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-6); }
+.big { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(3rem, 12vw, 9rem); line-height: 0.9; color: var(--color-surface-2); }
+.contact { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); align-content: end; }
+.contact a { text-decoration: none; }
+.legal { grid-column: 1 / -1; font-size: 0.8rem; color: var(--color-muted); }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }

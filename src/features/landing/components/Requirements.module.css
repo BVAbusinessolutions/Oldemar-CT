@@ -1,0 +1,9 @@
+.requirements { padding-block: var(--space-9); background: var(--color-green); color: #0b120a; }
+.title { font-size: clamp(2.4rem, 6vw, 4.5rem); margin-bottom: var(--space-7); }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin: 0; }
+.item { border-top: 2px solid #0b120a; padding-top: var(--space-4); }
+.item dt { font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; margin-bottom: var(--space-2); }
+.item dd { margin: 0; }
+.note { margin-top: var(--space-7); font-size: 0.82rem; opacity: 0.8; }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }

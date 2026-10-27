@@ -1,0 +1,15 @@
+.process { overflow: hidden; background: var(--color-bg); }
+.track { display: flex; align-items: center; gap: var(--space-8); height: 100vh; padding-inline: max(16px, 6vw); width: max-content; will-change: transform; }
+.intro { width: 34vw; flex-shrink: 0; }
+.intro h2 { font-size: clamp(2.4rem, 5vw, 4.5rem); }
+.eyebrow { color: var(--color-green-bright); text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.8rem; margin-bottom: var(--space-4); }
+.step { width: 30vw; min-width: 320px; flex-shrink: 0; border-top: 3px solid var(--color-green); padding-top: var(--space-5); display: grid; gap: var(--space-3); }
+.step:nth-child(odd) { transform: translateY(8vh); }
+.step h3 { font-size: 2rem; }
+.step p { color: var(--color-muted); max-width: 34ch; }
+.n { font-family: var(--font-display); font-size: 6rem; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px var(--color-accent); }
+@media (max-width: 860px), (prefers-reduced-motion: reduce) {
+  .track { flex-direction: column; align-items: stretch; height: auto; width: auto; padding-block: var(--space-9); gap: var(--space-7); }
+  .intro, .step { width: auto; min-width: 0; }
+  .step:nth-child(odd) { transform: none; }
+}

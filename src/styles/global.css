@@ -1,0 +1,24 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.05; margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--color-green-bright); }
+img, video { max-width: 100%; display: block; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+.container { width: min(100% - 32px, var(--container)); margin-inline: auto; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

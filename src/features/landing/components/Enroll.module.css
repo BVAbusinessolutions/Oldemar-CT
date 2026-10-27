@@ -1,0 +1,5 @@
+.enroll { padding-block: var(--space-10); }
+.inner { max-width: 920px; }
+.head { text-align: center; margin-bottom: var(--space-7); display: grid; gap: var(--space-3); }
+.head h2 { font-size: clamp(2.6rem, 7vw, 5rem); }
+.head p { color: var(--color-muted); }

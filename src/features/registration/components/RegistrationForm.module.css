@@ -1,0 +1,36 @@
+.form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: var(--space-7);
+}
+.progress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0 0 var(--space-7);
+  padding: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+.progress li { border-top: 3px solid var(--color-line); padding-top: var(--space-2); transition: border-color 300ms var(--ease-out), color 300ms; }
+.progress li span { font-family: var(--font-display); }
+.progress .active { border-color: var(--color-green-bright); color: var(--color-text); }
+.fieldset { border: 0; margin: 0; padding: 0; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); }
+.full { grid-column: 1 / -1; }
+.checks { display: flex; flex-direction: column; gap: var(--space-4); font-size: 0.92rem; }
+.actions { display: flex; justify-content: flex-end; gap: var(--space-3); margin-top: var(--space-7); }
+.formError { color: var(--color-danger); margin-top: var(--space-5); }
+.done { text-align: center; padding: var(--space-9) var(--space-5); display: grid; gap: var(--space-4); justify-items: center; background: var(--color-surface); border: 1px solid var(--color-line); }
+.doneMark { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--color-green); font-size: 2rem; }
+.code { font-family: var(--font-display); color: var(--color-accent); letter-spacing: 0.15em; }
+
+@media (max-width: 720px) {
+  .form { padding: var(--space-5); }
+  .grid { grid-template-columns: 1fr; }
+  .progress { grid-template-columns: repeat(2, 1fr); }
+}

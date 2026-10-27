@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 60%, #1a2617 0%, var(--color-bg) 70%);
+  display: grid;
+  place-items: center;
+}
+.video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.25; }
+.grain {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.08;
+  background-image: repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 3px);
+}
+.stage { position: absolute; inset: 0; display: grid; place-items: center; }
+.target { width: min(78vmin, 640px); grid-area: 1 / 1; will-change: transform; }
+.ringDark { fill: #121912; stroke: var(--color-green); stroke-width: 1.5; }
+.ringLight { fill: #1d2a1a; stroke: var(--color-green); stroke-width: 1.5; }
+.target circle[data-ring]:last-of-type { fill: var(--color-green); }
+.ringNumber { fill: var(--color-muted); font-family: var(--font-display); font-size: 11px; }
+.impact { fill: #050605; stroke: var(--color-accent); stroke-width: 1.5; }
+.scope { width: min(46vmin, 380px); grid-area: 1 / 1; stroke: var(--color-green-bright); stroke-width: 1.2; fill: none; will-change: transform; filter: drop-shadow(0 0 6px rgba(143, 194, 91, 0.45)); }
+.scopeRing { stroke-width: 2; }
+.scopeDot { fill: var(--color-danger); stroke: none; }
+
+.title {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center;
+  font-size: clamp(3.5rem, 13vw, 11rem);
+  line-height: 0.9;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+.title span { display: block; }
+.outline { color: transparent; -webkit-text-stroke: 2px var(--color-text); }
+
+.final {
+  position: absolute;
+  left: 50%; bottom: 8vh;
+  transform: translateX(-50%);
+  width: min(100% - 32px, 760px);
+  text-align: center;
+  display: grid; gap: var(--space-4); justify-items: center;
+}
+.eyebrow { color: var(--color-green-bright); text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.8rem; }
+.finalTitle { font-size: clamp(2rem, 5.5vw, 4rem); text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8); }
+.lead { color: var(--color-muted); max-width: 46ch; }
+.ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-2); }
+.hint { position: absolute; bottom: var(--space-5); right: var(--space-5); font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-muted); }
+
+/* Sin animación: el estado final queda visible y el título se oculta (lo hace GSAP). */
